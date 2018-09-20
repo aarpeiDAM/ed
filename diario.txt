@@ -8,3 +8,8 @@ git clone https://github.com/aarpeiDAM/ed.git
 git config --global user.name "name"
 git config -- global user.email "email"
 git config --global push.default simple
+
+git add <archivo> Para añadr un archivo que queremso que forme parte del repositorio.
+
+git commit -m "Mensaje" Crea una nueva versión.
+
