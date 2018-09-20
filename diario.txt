@@ -4,6 +4,7 @@ VirtualBox (pendiente de anotar)
 git:
 crar usuario y repositorio en github (pendiente de anotar)
 
+git clone https://github.com/aarpeiDAM/ed.git
 git config --global user.name "name"
 git config -- global user.email "email"
 git config --global push.default simple
