@@ -42,8 +42,35 @@ class VectorTest {
 	@Test
 	void sort() {
 		int [] v = new int[] {12,28,27,26};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12,26,27,28},v);
+		v = new int[] {12,27,26,27};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {12,26,27,27},v);
+		v =  new int []{35,90,67,54,32,1,98,75,64,97};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {1,32,35,54,64,67,75,90,97,98},v);
+		v = new int[] {};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {},v);
+		v = new int[] {1};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {1},v);
+		v = new int[] {-3,1};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {-3,1},v);
+		v = new int[] {0,1};
+		Vector.sort(v);
+		assertArrayEquals(new int[] {0,1},v);
+	}
+	@Test
+	void sort2() {
+		int [] v = new int[] {12,28,27,26};
 		Vector.ordenarArray(v);
 		assertArrayEquals(new int[] {12,26,27,28},v);
+		v = new int[] {12,27,26,27};
+		Vector.ordenarArray(v);
+		assertArrayEquals(new int[] {12,26,27,27},v);
 		v =  new int []{35,90,67,54,32,1,98,75,64,97};
 		Vector.ordenarArray(v);
 		assertArrayEquals(new int[] {1,32,35,54,64,67,75,90,97,98},v);
@@ -53,13 +80,12 @@ class VectorTest {
 		v = new int[] {1};
 		Vector.ordenarArray(v);
 		assertArrayEquals(new int[] {1},v);
-		v = new int[] {3,1};
+		v = new int[] {-3,1};
 		Vector.ordenarArray(v);
-		assertArrayEquals(new int[] {1,3},v);
+		assertArrayEquals(new int[] {-3,1},v);
 		v = new int[] {0,1};
 		Vector.ordenarArray(v);
 		assertArrayEquals(new int[] {0,1},v);
 	}
-	
 
 }
