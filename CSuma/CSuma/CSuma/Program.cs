@@ -15,6 +15,7 @@ namespace CSuma
                 decimal num4 = decimal.Parse(Console.ReadLine());
                 Console.WriteLine(num3 + num4);
         }
+        
     }
 }
     
