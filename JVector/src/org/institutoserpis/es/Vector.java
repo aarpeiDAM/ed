@@ -87,7 +87,7 @@ public class Vector {
 					int aux = unorderedArray[indexAtras];
 					unorderedArray[indexAtras]=unorderedArray[indexSelected];
 					for(int y = indexAtras+1;y<unorderedArray.length;y++) {
-						int aux = unorderedArray[y-1];
+						aux = unorderedArray[y-1];
 						unorderedArray[y]=unorderedArray[y];
 					}
 				}
