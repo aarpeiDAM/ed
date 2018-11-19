@@ -21,3 +21,5 @@ Por último los instalamos: sudo apt install oracle-java8-installer
 
 Cuando compilamos en java un fichero tendremos el fichero de partida y obtendremos uno nuevo con el nombre "<nombre>.class", en dicho archivo estara el código ejecutable en jre.
 
+20181119
+Expliación de Monodevelop
