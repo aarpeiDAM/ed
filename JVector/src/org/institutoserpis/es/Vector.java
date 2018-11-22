@@ -60,7 +60,7 @@ public class Vector {
 			System.out.println("---Fin array---");
 		}
 
-	//Selección directa
+	//Selección directa (Pendiente de Terminar)
 	static void sort(int [] unorderedArray) {
 		for(int indexSelected=0; indexSelected<unorderedArray.length; indexSelected++) {
 //			for (int indexActualArray = indexSelected+1; indexActualArray < unorderedArray.length; indexActualArray++){
