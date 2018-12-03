@@ -28,4 +28,7 @@ Introducción a los algoritmos SORT
 Instalación de monodevelop en la máquina virtual
 
 20181119
-Expliación del funcionamiento básico de Monodevelop e introducción a C#
+Expliación del funcionamiento básico de Monodevelop e introducción a C#.
+
+20181203
+Introducción a GTK+ 
