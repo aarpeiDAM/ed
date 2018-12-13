@@ -32,7 +32,6 @@ public partial class MainWindow
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.vbox1 = new global::Gtk.VBox();
-		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.hbox2 = new global::Gtk.HBox();
@@ -117,6 +116,7 @@ public partial class MainWindow
 		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
 		w8.Position = 1;
 		w8.Expand = false;
+		w8.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.result = new global::Gtk.Label();
 		this.result.Name = "result";
@@ -131,7 +131,7 @@ public partial class MainWindow
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 400;
+		this.DefaultWidth = 326;
 		this.DefaultHeight = 300;
 		this.result.Hide();
 		this.Show();

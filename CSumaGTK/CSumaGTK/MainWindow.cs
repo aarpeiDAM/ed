@@ -13,6 +13,7 @@ public partial class MainWindow : Gtk.Window
         };
         resta.Clicked += delegate {
             result.Show();
+
             int resultado = Convert.ToInt32(entryOne.Text) - Convert.ToInt32(entryTwo.Text);
             result.Text = Convert.ToString(resultado);
         };
