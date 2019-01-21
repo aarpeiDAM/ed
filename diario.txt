@@ -32,3 +32,6 @@ Expliación del funcionamiento básico de Monodevelop e introducción a C#.
 
 20181203
 Introducción a GTK+ 
+
+20190117
+Intalación e introducción a Android Studio
