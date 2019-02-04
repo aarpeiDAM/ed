@@ -9,7 +9,7 @@ import android.widget.EditText;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    public static String message="";
+    public static final String KEY_MESSAGE="clave1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sendMessage(View view){
         EditText editText =findViewById(R.id.editText);
-        String message =editText.toString();
+        String message =editText.getText().toString();
         Intent intent = new Intent(this,DisplayMessageActivity.class);
-        intent.putExtra("clave1",message);
+        intent.putExtra(KEY_MESSAGE,message);
         startActivity(intent);
 
     }
