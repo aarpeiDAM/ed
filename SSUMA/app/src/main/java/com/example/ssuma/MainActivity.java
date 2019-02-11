@@ -24,4 +24,34 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(Integer.toString(resultadoF));
 
     }
+    public void resta(View view){
+        EditText editText = (EditText) findViewById(R.id.num1);
+        int num1= Integer.parseInt(editText.getText().toString());
+        editText = (EditText) findViewById(R.id.num2);
+        int num2= Integer.parseInt(editText.getText().toString());
+        int resultadoF=num1-num2;
+        TextView textView =findViewById(R.id.resultado);
+        textView.setText(Integer.toString(resultadoF));
+
+    }
+    public void divide(View view){
+        EditText editText = (EditText) findViewById(R.id.num1);
+        int num1= Integer.parseInt(editText.getText().toString());
+        editText = (EditText) findViewById(R.id.num2);
+        int num2= Integer.parseInt(editText.getText().toString());
+        int resultadoF=num1/num2;
+        TextView textView =findViewById(R.id.resultado);
+        textView.setText(Integer.toString(resultadoF));
+
+    }
+    public void multiplica(View view){
+        EditText editText = (EditText) findViewById(R.id.num1);
+        int num1= Integer.parseInt(editText.getText().toString());
+        editText = (EditText) findViewById(R.id.num2);
+        int num2= Integer.parseInt(editText.getText().toString());
+        int resultadoF=num1*num2;
+        TextView textView =findViewById(R.id.resultado);
+        textView.setText(Integer.toString(resultadoF));
+
+    }
 }
