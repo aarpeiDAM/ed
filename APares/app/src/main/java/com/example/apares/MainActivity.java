@@ -16,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
     public List<String> listaPalabras= new ArrayList<String>();
     public List<Button> listaBotonesVacios= new ArrayList<Button>();
     public List<Button> listaBotonesRellenos= new ArrayList<Button>();
+    public List<String> listaBotonesRellenos2= new ArrayList<String>();
     public TextView textView;
     public TextView textView2;
     public int actualScore=0;
     public int botonC=0;
+    public int indexTarget=0;
     Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
             listaBotonesRellenos.add(listaBotonesVacios.get(random));
             listaBotonesVacios.remove(random);
         }
-
+        for(int i = 0; i<listaBotonesRellenos.size();i++){
+            listaBotonesRellenos2.add(listaBotonesRellenos.get(i).getText().toString());
+        }
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -88,21 +92,34 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button)view;
         int buttonPos = b.getId();
         if(buttonPos==botonC){
-            textView.setText("Has ganado");
+            textView.setText("Correcto");
             actualScore+=1;
+            if(actualScore!=12){
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     actualizarScore();
                 }
-            }, 2000);
+            }, 2000);}
+            else{
+                textView2.setText("Score: "+Integer.toString(actualScore));
+                textView.setText("Has ganado");
+            }
         }
     }
     public void actualizarScore(){
         textView2.setText("Score: "+Integer.toString(actualScore));
-        listaBotonesVacios.clear();
-        listaBotonesRellenos.clear();
-        ponerPalabrasEnBotones();
+        cambiarTarget();
+        textView.setText(listaBotonesRellenos2.get(indexTarget));
+
+    }
+    public void cambiarTarget(){
+        listaBotonesRellenos2.remove(indexTarget);
+        listaBotonesRellenos.remove(indexTarget);
+        indexTarget=establecerRandom(listaBotonesRellenos2.size());
+        botonC=listaBotonesRellenos.get(indexTarget).getId();
+
     }
 }
+/*Hay que hacer que en comprobar no guarde el texto vacio*/
