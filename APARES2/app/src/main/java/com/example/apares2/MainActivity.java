@@ -29,11 +29,7 @@ public class MainActivity extends AppCompatActivity {
         textView2.setText("Score: "+Integer.toString(actualScore));
 
     }
-    public int establecerRandom(int valor){
-        Random rand = new Random();
-        int random = rand.nextInt(valor);
-        return random;
-    }
+
     public void ponerPalabrasEnBotones(){
         listaPalabras.add("Leche");
         listaPalabras.add("Vaca");
@@ -79,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
             textView.setText("Correcto");
             actualScore+=1;
             if(actualScore!=12){
-                Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -89,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             else{
                 textView2.setText("Score: "+Integer.toString(actualScore));
                 textView.setText("Has ganado");
-                Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -106,12 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void actualizarScore(){
         textView2.setText("Score: "+Integer.toString(actualScore));
-        cambiarTarget();
-        textView.setText(listaPalabras.get(0));
-
-    }
-    public void cambiarTarget(){
         listaPalabras.remove(0);
-
+        textView.setText(listaPalabras.get(0));
     }
+
 }
