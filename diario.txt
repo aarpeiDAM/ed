@@ -35,3 +35,9 @@ Introducción a GTK+
 
 20190117
 Intalación e introducción a Android Studio
+
+20190212
+Propuesto proyeto de Android Studio
+
+20190321 
+Proyecto de Android Studio complementa terminado
