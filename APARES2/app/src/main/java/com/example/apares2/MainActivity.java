@@ -14,19 +14,23 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public List<String> listaPalabras= new ArrayList<String>();
-    public TextView textView;
-    public TextView textView2;
+    public TextView palabra;
+    public TextView scoreText;
+    public TextView fallosText;
     public int actualScore=0;
+    public int fallos=0;
 
     Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.respuesta);
-        textView2 = findViewById(R.id.score);
+        palabra = findViewById(R.id.respuesta);
+        scoreText = findViewById(R.id.score);
+        fallosText = findViewById(R.id.fallos);
         ponerPalabrasEnBotones();
-        textView2.setText("Score: "+Integer.toString(actualScore));
+        scoreText.setText("Score: "+Integer.toString(actualScore));
+        fallosText.setText("Fallos: "+Integer.toString(fallos));
 
     }
 
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Collections.shuffle(listaPalabras);
-        textView.setText(listaPalabras.get(0));
+        palabra.setText(listaPalabras.get(0));
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -72,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
     public void comprobar(View view){
         Button b = (Button)view;
         if(b.getText()==listaPalabras.get(0)){
-            textView.setText("Correcto");
+            palabra.setText("Correcto");
             actualScore+=1;
+            b.setTextSize(12);
             if(actualScore!=12){
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -82,26 +87,32 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 2000);}
             else{
-                textView2.setText("Score: "+Integer.toString(actualScore));
-                textView.setText("Has ganado");
+                scoreText.setText("Score: "+Integer.toString(actualScore));
+                palabra.setText("Has ganado");
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         listaPalabras.clear();
                         actualScore=0;
-                        textView2.setText("Score: "+Integer.toString(actualScore));
+                        fallos=0;
+                        scoreText.setText("Score: "+Integer.toString(actualScore));
+                        fallosText.setText("Fallos: "+Integer.toString(fallos));
+
                         ponerPalabrasEnBotones();
                     }
                 }, 5000);
 
             }
+        }else{
+            fallos+=1;
+            fallosText.setText("Fallos: "+Integer.toString(fallos));
         }
     }
 
     public void actualizarScore(){
-        textView2.setText("Score: "+Integer.toString(actualScore));
+        scoreText.setText("Score: "+Integer.toString(actualScore));
         listaPalabras.remove(0);
-        textView.setText(listaPalabras.get(0));
+        palabra.setText(listaPalabras.get(0));
     }
 
 }
