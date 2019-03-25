@@ -41,3 +41,6 @@ Propuesto proyeto de Android Studio
 
 20190321 
 Proyecto de Android Studio complementa terminado
+
+20190325
+Se ha comentado que se dará en este último trimestre
