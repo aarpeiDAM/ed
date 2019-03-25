@@ -1,5 +1,5 @@
 20180917
-VirtualBox (pendiente de anotar)
+VirtualBox
 
 git:
 crar usuario y repositorio en github (pendiente de anotar)
