@@ -43,3 +43,6 @@ Proyecto de Android Studio complementa terminado
 
 20190325
 Se ha comentado que se dará en este último trimestre.
+
+20190401
+Instalación de IntelJIDea e introducción a este.
