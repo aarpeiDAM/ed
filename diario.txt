@@ -46,3 +46,6 @@ Se ha comentado que se dará en este último trimestre.
 
 20190401
 Instalación de IntelJIDea e introducción a este.
+
+20190415
+Explicación del modelo MVC y pequeño ejemplo de este.También observables list.
