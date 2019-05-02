@@ -17,7 +17,6 @@ public class Controller {
     );
 
     public void initialize(){
-        System.out.println("Hola");
         tableInVbox.setItems(personas);
         label1.setText(Integer.toString(tableInVbox.getItems().size()));
     }

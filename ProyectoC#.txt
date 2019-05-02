@@ -1,0 +1,5 @@
+El proyecto cinsistira en una agenda en la cual se podrá:
+	- Añadir Usuarios
+	- Borrar Usuarios por nombre o por telélfono
+	- Mostrar los contactos por orden de inserción o por orden alfabetico.
+
