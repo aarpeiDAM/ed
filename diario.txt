@@ -49,3 +49,6 @@ Instalación de IntelJIDea e introducción a este.
 
 20190415
 Explicación del modelo MVC y pequeño ejemplo de este.También observables list.
+
+20190502
+Explicación ramas git hub.
