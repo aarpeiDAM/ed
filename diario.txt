@@ -52,3 +52,7 @@ Explicación del modelo MVC y pequeño ejemplo de este.También observables list
 
 20190502
 Explicación ramas git hub.
+
+20190506
+Ampliación git hub.
+
