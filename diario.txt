@@ -1,8 +1,6 @@
 20180917
 VirtualBox
 
-git:
-crar usuario y repositorio en github (pendiente de anotar)
 
 git clone https://github.com/aarpeiDAM/ed.git
 git config --global user.name "name"
@@ -55,4 +53,7 @@ Explicación ramas git hub.
 
 20190506
 Ampliación git hub.
+
+20190513
+Continuamos con el desarrollo del proyecto PCsharp.
 
