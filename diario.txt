@@ -57,3 +57,6 @@ Ampliación git hub.
 20190513
 Continuamos con el desarrollo del proyecto PCsharp y ampliación conocimientos git hub.
 
+20190516
+Continuamos con el desarrollo del proyecto PCsharp.
+
