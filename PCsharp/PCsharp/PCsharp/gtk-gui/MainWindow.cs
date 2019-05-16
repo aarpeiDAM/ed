@@ -17,6 +17,8 @@ public partial class MainWindow
 
 	private global::Gtk.TreeView treeview1;
 
+	private global::Gtk.VBox vbox2;
+
 	private global::Gtk.Label label4;
 
 	private global::Gtk.Table table1;
@@ -76,15 +78,19 @@ public partial class MainWindow
 		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.GtkScrolledWindow]));
 		w4.Position = 1;
 		// Container child vbox1.Gtk.Box+BoxChild
+		this.vbox2 = new global::Gtk.VBox();
+		this.vbox2.Name = "vbox2";
+		this.vbox2.Spacing = 6;
+		// Container child vbox2.Gtk.Box+BoxChild
 		this.label4 = new global::Gtk.Label();
 		this.label4.Name = "label4";
 		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString("Contacto");
-		this.vbox1.Add(this.label4);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.label4]));
-		w5.Position = 2;
+		this.vbox2.Add(this.label4);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.label4]));
+		w5.Position = 0;
 		w5.Expand = false;
 		w5.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
+		// Container child vbox2.Gtk.Box+BoxChild
 		this.table1 = new global::Gtk.Table(((uint)(2)), ((uint)(2)), false);
 		this.table1.Name = "table1";
 		this.table1.RowSpacing = ((uint)(6));
@@ -131,34 +137,38 @@ public partial class MainWindow
 		w9.BottomAttach = ((uint)(2));
 		w9.XOptions = ((global::Gtk.AttachOptions)(4));
 		w9.YOptions = ((global::Gtk.AttachOptions)(4));
-		this.vbox1.Add(this.table1);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.table1]));
-		w10.Position = 3;
+		this.vbox2.Add(this.table1);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.table1]));
+		w10.Position = 1;
 		w10.Expand = false;
 		w10.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
+		// Container child vbox2.Gtk.Box+BoxChild
 		this.Aceptar = new global::Gtk.Button();
 		this.Aceptar.CanFocus = true;
 		this.Aceptar.Name = "Aceptar";
 		this.Aceptar.UseUnderline = true;
 		this.Aceptar.Label = global::Mono.Unix.Catalog.GetString("Aceptar");
-		this.vbox1.Add(this.Aceptar);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.Aceptar]));
-		w11.Position = 4;
+		this.vbox2.Add(this.Aceptar);
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.Aceptar]));
+		w11.Position = 2;
 		w11.Expand = false;
 		w11.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
+		// Container child vbox2.Gtk.Box+BoxChild
 		this.Cancelar = new global::Gtk.Button();
 		this.Cancelar.CanFocus = true;
 		this.Cancelar.Name = "Cancelar";
 		this.Cancelar.UseUnderline = true;
 		this.Cancelar.Label = global::Mono.Unix.Catalog.GetString("Cancelar");
-		this.vbox1.Add(this.Cancelar);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.Cancelar]));
-		w12.PackType = ((global::Gtk.PackType)(1));
-		w12.Position = 5;
+		this.vbox2.Add(this.Cancelar);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.Cancelar]));
+		w12.Position = 3;
 		w12.Expand = false;
 		w12.Fill = false;
+		this.vbox1.Add(this.vbox2);
+		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.vbox2]));
+		w13.Position = 2;
+		w13.Expand = false;
+		w13.Fill = false;
 		this.Add(this.vbox1);
 		if ((this.Child != null))
 		{

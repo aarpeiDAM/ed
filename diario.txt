@@ -55,5 +55,5 @@ Explicación ramas git hub.
 Ampliación git hub.
 
 20190513
-Continuamos con el desarrollo del proyecto PCsharp.
+Continuamos con el desarrollo del proyecto PCsharp y ampliación conocimientos git hub.
 
