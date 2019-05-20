@@ -60,3 +60,6 @@ Continuamos con el desarrollo del proyecto PCsharp y ampliación conocimientos g
 20190516
 Continuamos con el desarrollo del proyecto PCsharp.
 
+20190520
+Se ha explicado que se evaluara de la tercera evaluación.
+

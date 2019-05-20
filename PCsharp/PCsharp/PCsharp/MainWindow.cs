@@ -14,15 +14,38 @@ public partial class MainWindow : Gtk.Window
         listStore.AppendValues("Eiron", "67457567");
         editAction.Sensitive = false;
         vbox2.Visible = false;
+
         newAction.Activated += (sender, e) =>
         {
             vbox2.Visible = true;
-            treeview1.Sensitive = false;    
+            treeview1.Sensitive = false;
+            Aceptar.Clicked +=delegate {
+                listStore.AppendValues(entry1.Text, entry2.Text);
+                entry1.Text = "";
+                entry2.Text = "";
+                vbox2.Visible = false;
+                treeview1.Sensitive = true;
+            };
+            Cancelar.Clicked += delegate {
+                entry1.Text = "";
+                entry2.Text = "";
+                vbox2.Visible = false;
+                treeview1.Sensitive = true;
+            };
         };
         editAction.Activated += (sender, e) =>
         {
             vbox2.Visible = true;
             treeview1.Sensitive = false;
+            Aceptar.Clicked +=AceptarEdit;
+            
+            Cancelar.Clicked += delegate {
+                entry1.Text = "";
+                entry2.Text = "";
+                vbox2.Visible = false;
+                treeview1.Sensitive = true;
+            };
+
 
         };
         treeview1.Selection.Changed+=(sender, e) => 
@@ -33,6 +56,39 @@ public partial class MainWindow : Gtk.Window
 
     }
 
+    void Aceptar_Clicked(object sender, EventArgs e)
+    {
+    }
+
+
+
+    void Aceptar_Clicked(object sender, EventArgs e)
+    {
+    }
+
+
+
+    void Aceptar_Clicked(object sender, EventArgs e)
+    {
+    }
+
+
+
+    void Aceptar_Clicked(object sender, EventArgs e)
+    {
+    }
+
+
+    private void AceptarEdit()
+    {
+        treeview1.Selection.GetSelected(out TreeIter treeIter);
+        treeview1.Model.SetValue(treeIter, 0, entry1.Text);
+        treeview1.Model.SetValue(treeIter, 1, entry2.Text);
+        entry1.Text = "";
+        entry2.Text = "";
+        vbox2.Visible = false;
+        treeview1.Sensitive = true;
+    }
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
         Application.Quit();
