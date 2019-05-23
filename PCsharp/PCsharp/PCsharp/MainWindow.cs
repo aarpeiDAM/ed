@@ -3,12 +3,14 @@ using Gtk;
 
 public partial class MainWindow : Gtk.Window
 {
+    public System.Action accionAceptar = null;
+    private ListStore listStore = new ListStore(typeof(String), typeof(String));
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
         treeview1.AppendColumn("Nombre", new CellRendererText(), "text", 0);
         treeview1.AppendColumn("Teléfono", new CellRendererText(), "text", 1);
-        ListStore listStore = new ListStore(typeof(String), typeof(String));
+
         treeview1.Model = listStore;
         vbox1.Sensitive = true;
         listStore.AppendValues("Eiron", "67457567");
@@ -19,7 +21,7 @@ public partial class MainWindow : Gtk.Window
         {
             vbox2.Visible = true;
             treeview1.Sensitive = false;
-            Aceptar.Clicked +=delegate {
+            accionAceptar = () =>Aceptar.Clicked +=delegate {
                 listStore.AppendValues(entry1.Text, entry2.Text);
                 entry1.Text = "";
                 entry2.Text = "";
@@ -35,10 +37,9 @@ public partial class MainWindow : Gtk.Window
         };
         editAction.Activated += (sender, e) =>
         {
-            vbox2.Visible = true;
-            treeview1.Sensitive = false;
-            Aceptar.Clicked +=AceptarEdit;
-            
+            /*vbox2.Visible = true;
+            treeview1.Sensitive = false;*/
+            accionAceptar = () => editar();
             Cancelar.Clicked += delegate {
                 entry1.Text = "";
                 entry2.Text = "";
@@ -55,40 +56,29 @@ public partial class MainWindow : Gtk.Window
 
 
     }
+    private void editar(){
+        vbox2.Visible = true;
+        treeview1.Sensitive = false;
 
-    void Aceptar_Clicked(object sender, EventArgs e)
-    {
+    }
+    private void nuevo(){
+        Aceptar.Clicked += delegate
+        {
+            listStore.AppendValues(entry1.Text, entry2.Text);
+            entry1.Text = "";
+            entry2.Text = "";
+            vbox2.Visible = false;
+            treeview1.Sensitive = true;
+        };
+
     }
 
 
 
-    void Aceptar_Clicked(object sender, EventArgs e)
-    {
-    }
 
 
 
-    void Aceptar_Clicked(object sender, EventArgs e)
-    {
-    }
 
-
-
-    void Aceptar_Clicked(object sender, EventArgs e)
-    {
-    }
-
-
-    private void AceptarEdit()
-    {
-        treeview1.Selection.GetSelected(out TreeIter treeIter);
-        treeview1.Model.SetValue(treeIter, 0, entry1.Text);
-        treeview1.Model.SetValue(treeIter, 1, entry2.Text);
-        entry1.Text = "";
-        entry2.Text = "";
-        vbox2.Visible = false;
-        treeview1.Sensitive = true;
-    }
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
         Application.Quit();
