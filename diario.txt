@@ -63,3 +63,6 @@ Continuamos con el desarrollo del proyecto PCsharp.
 20190520
 Se ha explicado que se evaluara de la tercera evaluación.
 
+20190528
+Final del diario.
+
